@@ -1,0 +1,45 @@
+* {
+  text-shadow: -1px 0px #222, 0px 1px #222, 1px 0px #222, 0px -1px #222;
+  font-size: 1.2em;
+  color: #ddd;
+  border-radius: 10px;
+}
+body {
+  text-align: center;
+}
+input {
+  text-shadow: none;
+  color: #222;
+}
+.hidden {
+  visibility: hidden;
+}
+#lowrapper {
+  text-align: right;
+}
+#logout {
+  display: inline-box;
+  font-size: 0.8em;
+}
+#clock {
+  text-align: center;
+  font-size: 1.4em;
+}
+#clock > span {
+  font-size: 2em;
+}
+#todo-form > input {
+  width: 380px;
+  font-size: 0.8em;
+  color: black;
+}
+#todo-list > li {
+  font-size: 0.8em;
+}
+#quote {
+  margin-top: 15vh;
+  text-align: center;
+  position: relative;
+
+  font-size: 1em;
+}
