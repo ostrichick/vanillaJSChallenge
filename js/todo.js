@@ -36,13 +36,10 @@ const changeArrayOrder = function (toDos, targetIdx, moveValue) {
   const newPosition = targetIdx + moveValue;
   // 이동할 값이 0보다 작거나 최대값을 벗어나는 경우 종료
   if (newPosition < 0 || newPosition >= toDos.length) return;
-
   // 임의의 변수를 하나 만들고 배열 값 저장
   const tempList = JSON.parse(JSON.stringify(toDos));
-
   // 옮길 대상을 target 변수에 저장하기
   const target = tempList.splice(targetIdx, 1)[0];
-
   // 새로운 위치에 옮길 대상을 추가하기
   tempList.splice(newPosition, 0, target);
   return tempList;
@@ -55,11 +52,7 @@ function upwardToDo(event) {
     const liPrev = li.previousSibling;
     const liText = event.target.previousSibling.innerText;
     toDoList.insertBefore(li, liPrev);
-
-    console.log(li.id);
     const cIdx = toDos.findIndex((keys) => keys.id == li.id);
-    console.log(cIdx + " cidx");
-    console.log(toDos);
     saveToDos(changeArrayOrder(toDos, cIdx, -1));
   }
 }
@@ -69,11 +62,7 @@ function downwardToDo(event) {
     const liNext = li.nextSibling;
     const liText = event.target.nextSibling.innerText;
     toDoList.insertBefore(li, liNext.nextSibling);
-
-    console.log(li.id);
     const cIdx = toDos.findIndex((keys) => keys.id == li.id);
-    console.log(cIdx + " cidx");
-    console.log(toDos);
     saveToDos(changeArrayOrder(toDos, cIdx, 1));
   }
 }
